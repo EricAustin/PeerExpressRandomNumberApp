@@ -6,8 +6,10 @@ console.log('express sourced')
 
 app.use(express.static('public'));
 
+var randomNumber = Math.random().toString();
+
 app.get('/random', function(req, res) {
-    res.send(Math.random().toString());
+    res.send(randomNumber);
 });
 
 app.listen(port, function(){
